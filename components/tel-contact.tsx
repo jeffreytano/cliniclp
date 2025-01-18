@@ -1,8 +1,7 @@
-import { UrlObject } from "url";
-
+import { PlainCard } from "./ui/plain-card";
 export function TelContact() {
   return (
-    <div className="p-4 bg-white min-w-60">
+    <PlainCard>
       <div className="flex items-center space-x-4">
         <i className="bi bi-phone icon"></i>
         <div>
@@ -10,6 +9,6 @@ export function TelContact() {
           <p className="text-lg font-bold text-center">000-0000-0000</p>
         </div>
       </div>
-    </div>
+    </PlainCard>
   );
 }

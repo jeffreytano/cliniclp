@@ -1,5 +1,5 @@
 "use client";
-import { DetailButton } from "./detail-button";
+import { DetailButton } from "./ui/detail-button";
 import { Card } from "./ui/card";
 import { cn } from "@/lib/utils";
 

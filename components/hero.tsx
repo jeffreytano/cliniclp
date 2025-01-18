@@ -1,14 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { Schedule } from "./schedule";
+import { ScheduleCard } from "./schedule-card";
 import { Separator } from "./ui/separator";
+import image from "../public/img/25952460_m.jpg";
 
 export function Hero() {
   return (
     <section className="relative h-screen">
       <Image
-        src="/img/25952460_m.jpg"
+        src={image}
         alt="Medical Equipment"
         width={1920}
         height={1080}
@@ -35,7 +36,7 @@ export function Hero() {
         </div>
       </div>
       <div className="absolute bottom-0 right-0 w-[576px]">
-        <Schedule />
+        <ScheduleCard />
       </div>
     </section>
   );

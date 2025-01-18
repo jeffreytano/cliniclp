@@ -3,30 +3,126 @@ import { Card } from "@/components/ui/card";
 export function BottomPortals() {
   const leftPortal = {
     title: "タイトル入る",
-    links: [
-      "テキスト入る",
-      "テキスト入る",
-      "テキスト入る",
-      "テキスト入る",
-      "テキスト入る",
-      "テキスト入る",
-      "テキスト入る",
-      "テキスト入る",
-      "テキスト入る",
-      "テキスト入る",
-      "テキスト入る",
-      "テキスト入る",
-      "テキスト入る",
-      "テキスト入る",
-      "テキスト入る",
+    items: [
+      {
+        text: "テキスト入る",
+        link: "#",
+      },
+      {
+        text: "テキスト入る",
+        link: "#",
+      },
+      {
+        text: "テキスト入る",
+        link: "#",
+      },
+      {
+        text: "テキスト入る",
+        link: "#",
+      },
+      {
+        text: "テキスト入る",
+        link: "#",
+      },
+      {
+        text: "テキスト入る",
+        link: "#",
+      },
+      {
+        text: "テキスト入る",
+        link: "#",
+      },
+      {
+        text: "テキスト入る",
+        link: "#",
+      },
+      {
+        text: "テキスト入る",
+        link: "#",
+      },
+      {
+        text: "テキスト入る",
+        link: "#",
+      },
+      {
+        text: "テキスト入る",
+        link: "#",
+      },
+      {
+        text: "テキスト入る",
+        link: "#",
+      },
+      {
+        text: "テキスト入る",
+        link: "#",
+      },
+      {
+        text: "テキスト入る",
+        link: "#",
+      },
+      {
+        text: "テキスト入る",
+        link: "#",
+      },
     ],
   };
 
   const rightPortal = {
     columns: [
-      ["テキスト入る", "テキスト入る", "テキスト入る", "テキスト入る"],
-      ["テキスト入る", "テキスト入る", "テキスト入る", "テキスト入る"],
-      ["テキスト入る", "テキスト入る", "テキスト入る", "テキスト入る"],
+      [
+        {
+          text: "テキスト入る",
+          link: "#",
+        },
+        {
+          text: "テキスト入る",
+          link: "#",
+        },
+        {
+          text: "テキスト入る",
+          link: "#",
+        },
+        {
+          text: "テキスト入る",
+          link: "#",
+        },
+      ],
+      [
+        {
+          text: "テキスト入る",
+          link: "#",
+        },
+        {
+          text: "テキスト入る",
+          link: "#",
+        },
+        {
+          text: "テキスト入る",
+          link: "#",
+        },
+        {
+          text: "テキスト入る",
+          link: "#",
+        },
+      ],
+      [
+        {
+          text: "テキスト入る",
+          link: "#",
+        },
+        {
+          text: "テキスト入る",
+          link: "#",
+        },
+        {
+          text: "テキスト入る",
+          link: "#",
+        },
+        {
+          text: "テキスト入る",
+          link: "#",
+        },
+      ],
     ],
   };
 
@@ -37,21 +133,25 @@ export function BottomPortals() {
           {leftPortal.title}
         </h3>
         <div className="grid grid-cols-3 gap-4">
-          {leftPortal.links.map((link, index) => (
-            <a key={index} href="#" className="text-sm river-green text-center">
-              {link}
+          {leftPortal.items.map((item, index) => (
+            <a
+              key={index}
+              href={item.link}
+              className="text-sm river-green text-center"
+            >
+              {item.text}
             </a>
           ))}
         </div>
       </Card>
-      <Card className="w-3/5 bg-white p-8 border-0 ">
+      <Card className="w-3/5 p-8 border-0 ">
         <div className="grid grid-cols-3 gap-8">
           {rightPortal.columns.map((column, columnIndex) => (
             <div key={columnIndex} className="space-y-4">
-              {column.map((text, textIndex) => (
-                <p key={textIndex} className="text-sm text-center">
-                  {text}
-                </p>
+              {column.map((item, index) => (
+                <div key={index} className="text-sm text-center">
+                  <a href={item.link}>{item.text}</a>
+                </div>
               ))}
             </div>
           ))}

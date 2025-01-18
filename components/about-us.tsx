@@ -1,5 +1,5 @@
 import Image from "next/image";
-import image from "../public/img/31005354_m.jpg";
+import dockerImage from "../public/img/31005354_m.jpg";
 
 export function AboutUs() {
   return (
@@ -8,7 +8,7 @@ export function AboutUs() {
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2">
             <Image
-              src={image}
+              src={dockerImage}
               alt="Doctor Portrait"
               width={800}
               height={600}
@@ -22,10 +22,6 @@ export function AboutUs() {
                 テキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入る
               </p>
             </div>
-            {/* <div className="text-right mt-8">
-              <p className="font-medium">〇〇クリニック</p>
-              <p className="text-xl font-bold">〇〇</p>
-            </div> */}
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { DetailButton } from "./detail-button";
+import { DetailButton } from "./ui/detail-button";
 import { UrlObject } from "url";
 import Image from "next/image";
 
@@ -11,6 +11,10 @@ type menuProps = {
   href: string | UrlObject;
 };
 
+function onClick() {
+  console.log(`clicked`);
+}
+
 export function MenuItem({ title, description, image, href }: menuProps) {
   return (
     <div className="grid md:grid-cols-2 items-center justify-items-center">
@@ -19,7 +23,7 @@ export function MenuItem({ title, description, image, href }: menuProps) {
           {title}
         </h3>
         <p>{description}</p>
-        <DetailButton>詳細はこちら</DetailButton>
+        <DetailButton onClick={onClick}>詳細はこちら</DetailButton>
       </div>
       <Image
         src={image}

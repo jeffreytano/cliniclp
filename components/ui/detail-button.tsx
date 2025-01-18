@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
+import { Button } from "./button";
 
 interface DetailButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -12,7 +13,7 @@ export function DetailButton({
   ...props
 }: DetailButtonProps) {
   return (
-    <button
+    <Button
       className={cn(
         "group h-16 min-w-[240px] bg-white border-2 border-black hover:bg-black/5 transition-colors",
         className
@@ -26,6 +27,6 @@ export function DetailButton({
           <ChevronRight className="h-4 w-4" />
         </div>
       </div>
-    </button>
+    </Button>
   );
 }

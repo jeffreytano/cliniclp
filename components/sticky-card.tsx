@@ -1,10 +1,10 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import Image from "next/image";
-import Link from "next/link";
-import { OnlineBooking } from "./littlecards/online-booking";
-import { TelContact } from "./littlecards/tel-contact";
+import { LinkedCard } from "./ui/linked-card";
+import { PlainCard } from "./ui/plain-card";
+import { OnlineBooking } from "./online-booking";
+import { TelContact } from "./tel-contact";
 
 export function StickyCard() {
   return (

@@ -1,16 +1,16 @@
 import Image from "next/image";
-import { OnlineBooking } from "./littlecards/online-booking";
-import { TelContact } from "./littlecards/tel-contact";
+import { OnlineBooking } from "./online-booking";
+import { TelContact } from "./tel-contact";
 import { BottomPortals } from "./bottom-portal";
+import image from "../public/img/29915326_m.jpg";
 
 export function ContactSection() {
   return (
     <section className="relative">
-      {/* Hero Image */}
       <div className="relative">
         <Image
-          src="/img/29915326_m.jpg"
-          alt="Contact"
+          src={image}
+          alt="Welcome"
           width={1920}
           height={1080}
           className="object-cover w-full h-screen"
