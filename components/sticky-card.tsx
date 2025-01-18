@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import { Card } from '@/components/ui/card'
-import Image from 'next/image'
-import Link from 'next/link'
+import { Card } from "@/components/ui/card";
+import Image from "next/image";
+import Link from "next/link";
 
 export function StickyCard() {
   return (
@@ -13,7 +13,7 @@ export function StickyCard() {
       >
         <div className="flex items-center space-x-4">
           <Image
-            src="/placeholder.svg?height=60&width=60"
+            src=""
             alt="Appointment"
             width={60}
             height={60}
@@ -28,7 +28,7 @@ export function StickyCard() {
       <div className="p-4 bg-gray-50">
         <div className="flex items-center space-x-4">
           <Image
-            src="/placeholder.svg?height=60&width=60"
+            src=""
             alt="Contact"
             width={60}
             height={60}
@@ -41,6 +41,5 @@ export function StickyCard() {
         </div>
       </div>
     </Card>
-  )
+  );
 }
-
