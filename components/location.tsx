@@ -5,12 +5,12 @@ import { cn } from "@/lib/utils";
 
 export function Location() {
   return (
-    <section id="location" className="py-24 bg-white border-black border-2">
-      <div className="grid md:grid-cols-2 justify-items-center bg-gray-200">
+    <section id="location" className="py-24 bg-white">
+      <div className="grid md:grid-cols-2 justify-items-center bg-gray-50">
         <div className="flex gap-12 pl-20">
           <div
             className={cn(
-              "writing-vertical font-bold text-5xl py-12 px-6 -ml-20 -mt-20 relative"
+              "writing-vertical font-bold text-5xl py-10 px-6 -ml-20 -mt-20 relative"
             )}
             style={{ writingMode: "vertical-rl" }}
           >

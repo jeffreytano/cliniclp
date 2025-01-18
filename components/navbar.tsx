@@ -1,61 +1,75 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { cn } from '@/lib/utils'
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+
+const navItems = [
+  { href: "#page1", text: "ペイジー1" },
+  { href: "#page2", text: "ペイジー2" },
+  { href: "#page3", text: "ペイジー3" },
+  { href: "#page4", text: "ペイジー4" },
+];
 
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 20
-      setScrolled(isScrolled)
-    }
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        scrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm' : 'bg-transparent'
+        "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
+        scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
       )}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/placeholder.svg?height=40&width=160"
-              alt="Clinic Logo"
-              width={160}
-              height={40}
-              className="h-10 w-auto"
-            />
+      <div className="pl-8 pr-80">
+        <div className="flex h-full items-center">
+          <Link href="/" className="text-2xl font-bold river-green">
+            〇〇クリニック
           </Link>
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-teal-600">
-              Home
-            </Link>
-            <Link href="#about" className="text-gray-700 hover:text-teal-600">
-              About
-            </Link>
-            <Link href="#services" className="text-gray-700 hover:text-teal-600">
-              Services
-            </Link>
-            <Link href="#schedule" className="text-gray-700 hover:text-teal-600">
-              Schedule
-            </Link>
-            <Link href="#contact" className="text-gray-700 hover:text-teal-600">
-              Contact
-            </Link>
+
+          {/* right side of the nav bar */}
+          <div className="hidden h-16 md:flex space-x-8 ml-auto">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  "text-sm transition-all duration-300 hover:text-teal-600",
+                  scrolled ? "text-gray-900" : "text-white"
+                )}
+              >
+                <span
+                  className={cn(
+                    "transition-all duration-300 pt-6",
+                    scrolled ? "block" : "hidden"
+                  )}
+                >
+                  {item.text}
+                </span>
+                <span
+                  className={cn(
+                    "transition-all duration-300 h-28 pt-4",
+                    scrolled ? "hidden" : "block writing-vertical"
+                  )}
+                  style={{ writingMode: "vertical-rl" }}
+                >
+                  {item.text}
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
     </nav>
-  )
+  );
 }
-

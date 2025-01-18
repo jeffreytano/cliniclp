@@ -7,6 +7,34 @@
   text-orientation: upright;
 }
 
-.title {
+.river-green {
   color: #019f8b;
+}
+
+.schedule-icon {
+  color: #019f8b;
+  text-align: center;
+}
+
+.hero-text {
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
+.bg-blueish-white {
+  background-color: #f1f9ff;
+}
+
+.icon {
+  color: #019f8b;
+  display: inline-flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  background-color: rgb(240, 240, 240);
+  border-radius: 50%; /* Make it rounded */
+  padding: 10px; /* Space around the icon */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a shadow */
 }

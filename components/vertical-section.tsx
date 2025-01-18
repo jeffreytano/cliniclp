@@ -34,19 +34,21 @@ export function VerticalSection() {
       description:
         "テキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入る",
       image: "/img/30813603_m.jpg",
+      href: "",
     },
     {
       title: "タイトル入る",
       description:
         "テキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入るテキスト入る",
       image: "/img/31337359_m.jpg",
+      href: "",
     },
   ];
 
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen py-24 bg-gray-100"
+      className="relative min-h-screen pb-24 bg-blueish-white"
     >
       {/* <div className="container mx-auto px-4"> */}
       <div className="relative w-full h-[600px]">
@@ -78,6 +80,7 @@ export function VerticalSection() {
                     key={index}
                     title={item.title}
                     image={item.image}
+                    href={item.href}
                     description={item.description}
                   ></MenuItem>
                   {index != items.length - 1 ? (
