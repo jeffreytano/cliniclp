@@ -50,9 +50,14 @@ export function VerticalSection() {
     >
       {/* <div className="container mx-auto px-4"> */}
       <div className="relative w-full h-[600px]">
-        <Image src="" alt="Medical header" fill className="object-cover" />
+        <Image
+          src="/img/30811655_m.jpg"
+          alt="Medical header"
+          fill
+          className="object-cover"
+        />
       </div>
-      <div className="w-[80%] px-40 mx-auto bg-white rounded-lg shadow-lg p-8">
+      <div className="w-[80%] px-40 mx-auto bg-white rounded-lg shadow-lg p-8 my-12">
         <div className="grid grid-cols-12 gap-8">
           <div className="col-span-1">
             <div
